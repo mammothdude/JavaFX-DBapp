@@ -9,7 +9,7 @@
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
    <children>
-      <TextField fx:id="sqlbox" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="400.0" promptText="Enter SQL code here" />
+      <TextField fx:id="sqlbox" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="400.0" promptText="Enter SQL statement here" />
       <Button mnemonicParsing="false" onAction="#query" text="Run Query" />
       <TableView fx:id="qresult" prefHeight="200.0" prefWidth="200.0">
         <columns>

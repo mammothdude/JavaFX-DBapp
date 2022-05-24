@@ -7,6 +7,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.text.Text;
 
 import java.sql.*;
 
@@ -16,11 +17,21 @@ public class HelloController {
     @FXML
     private TableView qresult;
 
-    //String sqlQuery = sqlbox.getText();
+    private String input;
+    /*                          //I couldn't get this variable to work in the DBquery class
+
+    textfieldInput() {
+        this.input = sqlbox.getText();
+    }
+    public String getInput{
+        return this.input;
+        }
+
+     */
+
 
 
     public void query () {
-
 
         ObservableList<DBquery> values = DBquery.getDBQuery();
 

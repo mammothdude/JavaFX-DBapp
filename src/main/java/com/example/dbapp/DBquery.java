@@ -10,7 +10,13 @@ import javafx.scene.control.TextField;
 import java.sql.*;
 
 public class DBquery {
-    private StringProperty col1;
+    /*                                      //I'm missing something really basic here
+    textfieldInput sqlquery = new textfieldInput();
+    String sql = sqlquery.getInput();
+
+     */
+
+    private StringProperty col1;            //I just went with 4 columns, couldn't figure out how to auto-generate columns
     private StringProperty col2;
     private StringProperty col3;
     private StringProperty col4;
@@ -50,8 +56,8 @@ public class DBquery {
         try {
             conn = DriverManager.getConnection(conn_url);
             Statement stmt = conn.createStatement();
-            //ResultSet rs = stmt.executeQuery(sqlQuery);     //How do I get the input from the textfield???
-            ResultSet rs = stmt.executeQuery("select * from employees"); // this is to see if the tableview loads - it does!
+            //ResultSet rs = stmt.executeQuery(sql);     //How do I get the input from the textfield???
+            ResultSet rs = stmt.executeQuery("select * from employees limit 10"); // this is to see if the tableview loads - it does!
 
             while(rs != null && rs.next()) {
                 String col1 = rs.getString(1);
